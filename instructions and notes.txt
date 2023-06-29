@@ -12,3 +12,17 @@ scss gives us some more power (e.g. you can create variable names)
 
 webpack ONLY pulls from index files (e.g. index.js, index.scss, index.html). In your index files, you should be importing classes, etc from other files in the /scripts and /styles folders.
     - what webpack does is create "main.js" and "main.css" files in /dist
+
+'npm run build' adds main.css.map and main.js.map to /dist
+    - go to github repo>settings>pages, change Branch to main and save
+
+BRANCHES
+git checkout -b <whatever you're working on>
+    - the dash b adds a new branch (omit -b if just switching branches)
+now, after add and commit,
+    - git push origin <branch_name>
+once ready to merge:
+    - git checking main
+    - git merge <branch_name>
+    - if any issues with merging, call the PM
+    - you cannot change branches without committing
