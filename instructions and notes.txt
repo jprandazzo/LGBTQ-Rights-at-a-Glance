@@ -8,3 +8,7 @@ whenever you have a callback (e.g. addEventListener, setTimeout, setInterval), i
 
 scss gives us some more power (e.g. you can create variable names)
     - those go in src/styles
+
+
+webpack ONLY pulls from index files (e.g. index.js, index.scss, index.html). In your index files, you should be importing classes, etc from other files in the /scripts and /styles folders.
+    - what webpack does is create "main.js" and "main.css" files in /dist
