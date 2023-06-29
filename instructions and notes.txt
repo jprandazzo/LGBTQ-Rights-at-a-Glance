@@ -1,0 +1,10 @@
+all classes should be in different files in src/scripts
+
+first file that gets run is index.js (that's the only file that webpack looks for)
+
+whenever you have a callback (e.g. addEventListener, setTimeout, setInterval), it loses context. you need to bind it.
+    - get used to binding functions in instructor (this will become important in react)
+
+
+scss gives us some more power (e.g. you can create variable names)
+    - those go in src/styles
