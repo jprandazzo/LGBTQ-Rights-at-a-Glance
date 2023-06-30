@@ -6,7 +6,7 @@ export default class List {
 
     //     this.ele.addEventListener("click", this.handleClick);
     }
-
+    toggleHide(){}
     // handleClick() {
     //     this.ele.children[0].innerText = "Ouch!"
     // }

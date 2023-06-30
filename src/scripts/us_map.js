@@ -7,4 +7,14 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
   })
 }
 
-export {loadmap}
+let setClass = function(score) {
+    if (score <0) {
+        return 'color_red'
+    } else if (score === 0 || score === 1) {
+        return 'color_pale_green'
+    } else if (score > 1) {
+        return 'color_green'
+    }
+}
+
+export {loadmap,setClass}

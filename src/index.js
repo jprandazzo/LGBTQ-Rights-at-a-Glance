@@ -2,7 +2,7 @@ import Example from "./scripts/example"
 import List from "./scripts/list"
 import Issue from "./scripts/issue"
 import getData from "./scripts/fetch"
-import {loadmap} from "./scripts/us_map"
+import {loadmap,setClass} from "./scripts/us_map"
 
 document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("title")
@@ -13,10 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
     loadmap();
 })
 
-let color_scheme = {
-    '<0': '#F75B5B',
-    '0-1': '#B3E5A2',
-    '2-6': '#689D55'
+let color_scheme = function(num){
+    if (num < 0){ 
+        return '#F75B5B'
+    } else if (num === 0 || num === 1) {
+        return '#B3E5A2'
+    } else if (num > 1){
+        return '#689D55'
+    }
 }
 
 getData()
@@ -31,11 +35,10 @@ getData()
             li.addEventListener("click", e => {obj.node.states.forEach(state => {
                 let path_id = document.querySelector(`#${state.id}`)
                 path_id.setAttribute('data-value',`${state.value}`)
-                debugger
                 path_id.setAttribute('data-policy',`${state.policy}`)
-                // path_id.style.color = function() {
-                //     if path_id.getAttribute('data-value')
-                // }
+                path_id.setAttribute('class',setClass(state.value))
+                // debugger
+                console.log('test')
             })
             })
             document.getElementById('issues_list').appendChild(li)

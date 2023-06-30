@@ -2,9 +2,17 @@
     float:left
 };
 
-// .state:hover{
-//     fill:blue !important
-// }
+.color_red {
+    fill: #F75B5B !important
+}
+
+.color_pale_green {
+    fill: #B3E5A2 !important
+}
+
+.color_green {
+    fill: #689D55 !important
+}
 
 path:hover {
     cursor: pointer;
