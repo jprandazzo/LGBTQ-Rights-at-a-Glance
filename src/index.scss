@@ -1,10 +1,15 @@
 @import "./styles/example.scss";
 @import "./styles/us_map.scss";
+@import "./styles/list.scss";
 
 // #main {
 //     color: $color;
 // }
 
-#list {
-    float:right
+#issues {
+    float:right;
+    position: fixed;
+    right:20px;
 }
+
+

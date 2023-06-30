@@ -15,6 +15,14 @@ path:hover {
   fill: blue !important;
 }
 
-#list {
+.list {
   float: right;
+  position: fixed;
+  right: 100px;
+}
+
+#issues {
+  float: right;
+  position: fixed;
+  right: 20px;
 }
