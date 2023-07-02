@@ -1,6 +1,6 @@
 export default class Issue {
     constructor(obj) {
-        this.id = obj.node.id;
+        this.obj = obj.node;
         this.name = obj.node.name;
         this.states = obj.node.states;
     //     this.ele.innerHTML = "<h1>It's Alive!!!</h1>";

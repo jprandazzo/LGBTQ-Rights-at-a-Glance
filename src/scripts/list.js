@@ -1,6 +1,8 @@
 export default class List {
-    constructor(id) {
-        this.id = id;
+    constructor(obj, displayStatus) {
+        this.obj = obj;
+
+        this.obj.style.display = displayStatus
     //     this.ele.innerHTML = "<h1>It's Alive!!!</h1>";
     //     this.handleClick = this.handleClick.bind(this);
 
