@@ -1,9 +1,11 @@
 import List from "./list"
 
 export default class Button {
-    constructor(obj, text) {
+    constructor(obj, text, displayStatus) {
         this.obj = obj;
         this.obj.innerHTML = `<button>${text}</button>`;
+        this.obj.style.display = displayStatus
+        // debugger
         // this.obj.style.display = "none"
         this.handleClick = this.handleClick.bind(this);
         this.obj.addEventListener("click", this.handleClick);
@@ -18,17 +20,11 @@ export default class Button {
     }
 
     handleClick() {
-        // document.querySelectorAll('path').forEach(state =>{
-        //     if (state.style.display === 'none') {
-        //         state.style.display = ''
-        //     } else {
-        //         state.style.display = 'none'
-        //     }
-        //     debugger
-        //     console.log('click')
-        // });
+        let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
+        const issues_list = new List(document.getElementById("issues_list"), 'block')
+        state_issues_list.toggleHide()
+        back_button.style.display = 'none'
 
-        // state_issues_list.clearList()
         
         //     debugger
         //     let state_issues_list = document.querySelector('state_issues_list')

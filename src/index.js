@@ -6,18 +6,13 @@ import {getIssuesData} from "./scripts/fetch"
 import {loadmap,setClass} from "./scripts/us_map"
 
 document.addEventListener("DOMContentLoaded", () => {
-    const title = document.getElementById("title")
-    new Example(title)
+    const title = new Example (document.getElementById("title"))
 
-    const button = document.getElementById("back_button")
-    new Button(button, 'Go back')
+    const back_button = new Button(document.getElementById("back_button"), 'Go Back', 'none')
 
-    const issues_list = document.getElementById("issues_list")
-    new List(issues_list, 'block')
-
+    const issues_list = new List(document.getElementById("issues_list"), 'block')
     
-    const state_issues_list = document.getElementById("state_issues_list")
-    new List(state_issues_list, 'none')
+    const state_issues_list = new List(document.getElementById("state_issues_list"), 'none')
 
     loadmap();
 })

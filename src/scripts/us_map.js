@@ -20,6 +20,8 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
         issues_list.toggleHide()
         let state_id = d3.event.target.id;
         state_issues_list.clearList();
+        // debugger
+        back_button.style.display = 'block';
         getStateData(state_id)
           .then(data =>{
             let state_name = data.data.state.name

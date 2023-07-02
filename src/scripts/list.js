@@ -5,6 +5,7 @@ export default class List {
         this.obj.style.display = displayStatus
     //     this.ele.innerHTML = "<h1>It's Alive!!!</h1>";
         this.clearList = this.clearList.bind(this);
+        this.toggleHide = this.toggleHide.bind(this);
 
     //     this.ele.addEventListener("click", this.handleClick);
     }
@@ -21,8 +22,6 @@ export default class List {
     }
 
     clearList() {
-      console.log('test')
-      debugger
       while (this.obj.firstChild) {
           this.obj.removeChild(this.obj.firstChild)
       }
