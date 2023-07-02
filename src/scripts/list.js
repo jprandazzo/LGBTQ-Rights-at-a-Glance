@@ -4,15 +4,25 @@ export default class List {
 
         this.obj.style.display = displayStatus
     //     this.ele.innerHTML = "<h1>It's Alive!!!</h1>";
-    //     this.handleClick = this.handleClick.bind(this);
+        this.clearList = this.clearList.bind(this);
 
     //     this.ele.addEventListener("click", this.handleClick);
     }
     toggleHide(){
-        if (this.style.display === "none") {
-          this.style.display = "block";
+        if (this.obj.style.display === "none") {
+          this.obj.style.display = "block";
         } else {
-          this.style.display = "none";
+          this.obj.style.display = "none";
         }
+    }
+
+    appendChild(childNode) {
+      this.obj.appendChild(childNode)
+    }
+
+    clearList() {
+      while (this.obj.firstChild) {
+          this.obj.removeChild(this.obj.firstChild)
+      }
     }
 }

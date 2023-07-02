@@ -1,5 +1,7 @@
 import {getStateData} from "./fetch"
-// const issues_list = document.getElementById("issues_list")
+import List from "./list"
+const issues_list = new List(document.getElementById("issues_list"),"block")
+const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
 const toggleHide = function(target){
     if (target.style.display === "none") {
@@ -15,17 +17,15 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
     .node().append(data.documentElement)
 
     d3.selectAll('path').on('click',() =>{
-        toggleHide(issues_list)
+        issues_list.toggleHide()
         let state_id = d3.event.target.id
         getStateData(state_id)
           .then(data =>{
-            console.log('fetched')
             let state_name = data.data.state.name
             let state_description = data.data.state.score.description // (e.g. "High Priority to Achieve Basic Equality")
             let state_kind = data.data.state.score.kind
             let state_issues = data.data.state.issues
 
-            let state_issues_list = document.getElementById('state_issues_list')
             // state_issues_list.appendChild(document.createTextNode(state_name))
 
             state_issues.forEach(issue => {
@@ -39,7 +39,18 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 
             })
         })
-        toggleHide(state_issues_list)
+
+        // GOAL: trying to hide all other states when a state is click.
+        // RESULT: Not working as of Sunday 7/2 6:00 PM
+        
+        // document.querySelectorAll('path').forEach(state => {
+        //   if (state.id !== state_id) {
+        //     state.style.display = 'none !important'
+        //   }
+        //   debugger
+        //   console.log('test')
+        // })
+        state_issues_list.toggleHide()
     })
   })
 }

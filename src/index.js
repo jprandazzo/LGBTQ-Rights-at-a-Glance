@@ -1,3 +1,4 @@
+import Button from "./scripts/button"
 import Example from "./scripts/example"
 import List from "./scripts/list"
 import Issue from "./scripts/issue"
@@ -7,6 +8,9 @@ import {loadmap,setClass} from "./scripts/us_map"
 document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("title")
     new Example(title)
+
+    const button = document.getElementById("back_button")
+    new Button(button, 'Go back')
 
     const issues_list = document.getElementById("issues_list")
     new List(issues_list, 'block')
@@ -36,10 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // }
 
 getIssuesData()
-    .then(data => {
-        let issueList = data.data.issues.edges
+    .then(data => { 
 
-        issueList.forEach(obj => {
+        data.data.issues.edges.forEach(obj => {
             new Issue(obj);
             let li = document.createElement("li");
             li.setAttribute('id',`${obj.node.id}`);
@@ -53,7 +56,7 @@ getIssuesData()
                 // debugger
             })
             })
-            document.getElementById('issues_list').appendChild(li)
+            issues_list.appendChild(li)
         })
         
         // state_issues_list.forEach(obj => {
