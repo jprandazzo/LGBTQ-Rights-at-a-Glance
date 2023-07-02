@@ -6,8 +6,11 @@ export default class List {
 
     //     this.ele.addEventListener("click", this.handleClick);
     }
-    toggleHide(){}
-    // handleClick() {
-    //     this.ele.children[0].innerText = "Ouch!"
-    // }
+    toggleHide(){
+        if (this.style.display === "none") {
+          this.style.display = "block";
+        } else {
+          this.style.display = "none";
+        }
+    }
 }

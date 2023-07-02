@@ -24,7 +24,7 @@
 
 path:hover {
   cursor: pointer;
-  fill: blue !important;
+  filter: brightness(0.8);
 }
 
 .list {

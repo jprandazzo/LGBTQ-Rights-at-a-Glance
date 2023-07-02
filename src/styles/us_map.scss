@@ -16,5 +16,6 @@
 
 path:hover {
     cursor: pointer;
-    fill: blue !important
+    // fill: blue !important
+    filter: brightness(0.8);
 }
