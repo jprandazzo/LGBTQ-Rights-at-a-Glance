@@ -21,6 +21,8 @@ export default class List {
     }
 
     clearList() {
+      console.log('test')
+      debugger
       while (this.obj.firstChild) {
           this.obj.removeChild(this.obj.firstChild)
       }

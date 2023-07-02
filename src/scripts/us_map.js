@@ -18,7 +18,8 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 
     d3.selectAll('path').on('click',() =>{
         issues_list.toggleHide()
-        let state_id = d3.event.target.id
+        let state_id = d3.event.target.id;
+        state_issues_list.clearList();
         getStateData(state_id)
           .then(data =>{
             let state_name = data.data.state.name
@@ -42,7 +43,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 
         // GOAL: trying to hide all other states when a state is click.
         // RESULT: Not working as of Sunday 7/2 6:00 PM
-        
+
         // document.querySelectorAll('path').forEach(state => {
         //   if (state.id !== state_id) {
         //     state.style.display = 'none !important'

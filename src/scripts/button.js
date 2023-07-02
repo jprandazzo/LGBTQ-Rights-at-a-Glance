@@ -1,3 +1,5 @@
+import List from "./list"
+
 export default class Button {
     constructor(obj, text) {
         this.obj = obj;
@@ -15,24 +17,19 @@ export default class Button {
         }
     }
 
-    handleClick(state_issues_list) {
-        document.querySelectorAll('path').forEach(state =>{
-            if (state.style.display === 'none') {
-                state.style.display = ''
-            } else {
-                state.style.display = 'none'
-            }
-            debugger
-            console.log('click')
-        });
+    handleClick() {
+        // document.querySelectorAll('path').forEach(state =>{
+        //     if (state.style.display === 'none') {
+        //         state.style.display = ''
+        //     } else {
+        //         state.style.display = 'none'
+        //     }
+        //     debugger
+        //     console.log('click')
+        // });
 
-        (state_issues_list) => {
-            console.log('click2')
-            debugger
-            while (state_issues_list.firstChild) {
-                this.obj.removeChild(state_issues_list.firstChild)
-            }
-        }
+        // state_issues_list.clearList()
+        
         //     debugger
         //     let state_issues_list = document.querySelector('state_issues_list')
         //     while (state_issues_list.obj.firstChild) {

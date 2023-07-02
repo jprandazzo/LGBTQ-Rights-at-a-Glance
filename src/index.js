@@ -20,24 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new List(state_issues_list, 'none')
 
     loadmap();
-    // document.querySelectorAll('path').forEach(state => {
-    //     state.addEventListener('click', (event) =>{
-    //         state_id = event.target.id
-    //         debugger
-    //         console.log(state_id)
-    //     })
-    // })
 })
-
-// let color_scheme = function(num){
-//     if (num < 0){ 
-//         return '#F75B5B'
-//     } else if (num === 0 || num === 1) {
-//         return '#B3E5A2'
-//     } else if (num > 1){
-//         return '#689D55'
-//     }
-// }
 
 getIssuesData()
     .then(data => { 
