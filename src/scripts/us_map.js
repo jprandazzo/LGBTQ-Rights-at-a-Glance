@@ -1,7 +1,7 @@
 import {getStateData} from "./fetch"
 import List from "./list"
 const issues_list = new List(document.getElementById("issues_list"),"block")
-const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
+// const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
 // const toggleHide = function(target){
 //     if (target.style.display === "none") {
@@ -11,9 +11,9 @@ const state_issues_list = new List(document.getElementById('state_issues_list'),
 //     }
 // }
 
-let grapharea = document.getElementById('myChart').getContext('2d');
+let grapharea = document.getElementById('myChart');
 let myChart = new Chart(grapharea, {type:'bar'});
-// myChart.style.display = 'none';
+myChart.globalCompositeOperation='destination-over';
 
 let loadmap = function() {d3.xml("src/scripts/us.svg")
   .then(data => {
@@ -23,7 +23,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
     d3.selectAll('path').on('click',() =>{
         issues_list.toggleHide()
         let state_id = d3.event.target.id;
-        state_issues_list.clearList();
+        // state_issues_list.clearList();
         // debugger
         back_button.style.display = 'block';
         getStateData(state_id)
@@ -31,7 +31,9 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
             let state_name = data.data.state.name
             let state_description = data.data.state.score.description // (e.g. "High Priority to Achieve Basic Equality")
             let state_kind = data.data.state.score.kind
-            let state_issues = data.data.state.issues
+            let state_issues = data.data.state.issues.map((issue, idx) => {return {x:idx,y:issue.value, policy: issue.policy}})
+            debugger
+            // debugger
 
             // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
@@ -41,12 +43,21 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
               data: {
                 labels: data.data.state.issues.map(issue => issue.name),
                 datasets: [{
-                  label: 'Score',
-                  data: data.data.state.issues.map(issue => issue.value),
+                  label: `Score on each issue for state of ${state_name}`,
+                  data: state_issues,
                   borderWidth: 1
                 }]
               },
               options: {
+                plugins: {
+                  tooltip: {
+                    callbacks: {
+                      label: ((tooltipItem,data) =>{
+                          return `Policy: ${tooltipItem.raw.policy}`
+                      })
+                    }
+                  }
+                },
                 scales: {
                   y: {
                     beginAtZero: true
@@ -77,7 +88,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
         //   debugger
         //   console.log('test')
         // })
-        state_issues_list.toggleHide()
+        // state_issues_list.toggleHide()
     })
   })
 }
@@ -85,7 +96,9 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 let setClass = function(score) {
     if (score <0) {
         return 'color_red'
-    } else if (score === 0 || score === 1) {
+    } else if (score === 0) {
+      return 'color_grey'
+    } else if (score === 1 || score === 1) {
         return 'color_pale_green'
     } else if (score > 1) {
         return 'color_green'

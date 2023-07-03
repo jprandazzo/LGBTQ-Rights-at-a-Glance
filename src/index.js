@@ -13,13 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const issues_list = new List(document.getElementById("issues_list"), 'block')
     
-    const state_issues_list = new List(document.getElementById("state_issues_list"), 'none')
+    // const state_issues_list = new List(document.getElementById("state_issues_list"), 'none')
 
     loadmap();
 })
 
 // let grapharea = document.getElementById('myChart').getContext('2d');
 // let myChart = new Chart(grapharea, {type:'bar'})
+
+let map = document.getElementById('us_map');
+let map_bg = document.createElement('div');
+map_bg.setAttribute('id','bg_flag');
+map.appendChild(map_bg);
 
 getIssuesData()
     .then(data => { 

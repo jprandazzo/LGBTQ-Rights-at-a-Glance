@@ -11,6 +11,10 @@
   float: left;
 }
 
+.color_grey {
+  fill: #989898 !important;
+}
+
 .color_red {
   fill: #F75B5B !important;
 }
@@ -29,10 +33,37 @@ path:hover {
 }
 
 .list {
+  font-size: 24;
+  font-family: sans-serif;
   float: right;
   position: fixed;
   overflow-wrap: normal;
   right: 100px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+  border: 3px solid #ddd;
+  background-color: #989898;
+}
+
+ul li {
+  text-align: center;
+  padding: 6px 16px;
+  margin: 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ddd;
+}
+
+#issues_list {
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+}
+
+ul:first-child {
+  padding: 200px 0px 0px 0px;
 }
 
 #issues_list li:hover {
@@ -45,11 +76,21 @@ path:hover {
 }
 
 .list {
-  width: 600px;
+  max-width: 1000px;
+}
+
+#myChart {
+  width: 700px;
+  height: auto;
 }
 
 #issues {
   float: right;
   position: fixed;
   right: 20px;
+  color: blue;
+}
+
+:hover {
+  cursor: pointer;
 }

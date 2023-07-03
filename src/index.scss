@@ -8,28 +8,39 @@
 //     color: $color;
 // }
 
-// #issues {
-//     float:right;
-//     position: fixed;
-//     right:20px;
-//     color: blue;
+// #us_map::after {    
+//     content: "";
+//     background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
+//     background-size: cover;
+//     position: absolute;
+//     top: 0px;
+//     right: 0px;
+//     bottom: 0px;
+//     left: 0px;
+//     opacity: 0.25;
 // }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    border: 1px solid #ddd;
-  }
-  
-  ul li {
-    padding: 8px 16px;
-    border: 1px solid #ddd;
-    // border-top: 1px solid #ddd;
-  }
+// #bg_flag {
+//     background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
+//     background-size: contain;
+//     opacity: .25;
+// }
+
+#issues {
+    float:right;
+    position: fixed;
+    right:20px;
+    color: blue;
+}
+
+
   
 //   ul li:last-child {
 //     border-bottom: none
 //   }
 
+:hover {
+    cursor: pointer;
+}
 
 

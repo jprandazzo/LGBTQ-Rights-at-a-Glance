@@ -20,9 +20,9 @@ export default class Button {
     }
 
     handleClick() {
-        let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
+        // let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
         const issues_list = new List(document.getElementById("issues_list"), 'block')
-        state_issues_list.toggleHide()
+        // state_issues_list.toggleHide()
         back_button.style.display = 'none'
         myChart.style.display = 'none'
 
