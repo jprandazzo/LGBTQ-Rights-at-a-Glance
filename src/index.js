@@ -1,8 +1,8 @@
 import Button from "./scripts/button"
 import Example from "./scripts/example"
 import List from "./scripts/list"
-import Issue from "./scripts/issue"
-import {getIssuesData} from "./scripts/fetch"
+import Issue from "./scripts/issues_chart"
+import {getIssuesData,getStateData} from "./scripts/fetch"
 import {loadmap,setClass} from "./scripts/us_map"
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     loadmap();
 })
 
+// let grapharea = document.getElementById('myChart').getContext('2d');
+// let myChart = new Chart(grapharea, {type:'bar'})
+
 getIssuesData()
     .then(data => { 
 
         data.data.issues.edges.forEach(obj => {
-            new Issue(obj);
             let li = document.createElement("li");
             li.setAttribute('id',`${obj.node.id}`);
             let textNode = document.createTextNode(obj.node.name)

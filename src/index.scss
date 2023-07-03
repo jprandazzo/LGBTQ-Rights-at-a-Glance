@@ -2,16 +2,34 @@
 @import "./styles/us_map.scss";
 @import "./styles/list.scss";
 @import "./styles/button.scss";
+@import "./styles/issues_chart.scss";
 
 // #main {
 //     color: $color;
 // }
 
-#issues {
-    float:right;
-    position: fixed;
-    right:20px;
-}
+// #issues {
+//     float:right;
+//     position: fixed;
+//     right:20px;
+//     color: blue;
+// }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+  
+  ul li {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    // border-top: 1px solid #ddd;
+  }
+  
+//   ul li:last-child {
+//     border-bottom: none
+//   }
 
 
 

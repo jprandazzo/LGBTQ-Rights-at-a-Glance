@@ -3,13 +3,17 @@ import List from "./list"
 const issues_list = new List(document.getElementById("issues_list"),"block")
 const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
-const toggleHide = function(target){
-    if (target.style.display === "none") {
-      target.style.display = "block";
-    } else {
-      target.style.display = "none";
-    }
-}
+// const toggleHide = function(target){
+//     if (target.style.display === "none") {
+//       target.style.display = "block";
+//     } else {
+//       target.style.display = "none";
+//     }
+// }
+
+let grapharea = document.getElementById('myChart').getContext('2d');
+let myChart = new Chart(grapharea, {type:'bar'});
+// myChart.style.display = 'none';
 
 let loadmap = function() {d3.xml("src/scripts/us.svg")
   .then(data => {
@@ -30,17 +34,37 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
             let state_issues = data.data.state.issues
 
             // state_issues_list.appendChild(document.createTextNode(state_name))
+            myChart.destroy()
 
-            state_issues.forEach(issue => {
-              let li = document.createElement('li')
-              li.setAttribute('data-id',document.createTextNode(issue.kind))
-              li.setAttribute('data-value',document.createTextNode(issue.value))
-              let textNode = document.createTextNode(`${issue.name}: ${issue.policy}. Score: ${issue.value}`)
-              li.appendChild(textNode)
+            myChart = new Chart(grapharea, {
+              type: 'bar',
+              data: {
+                labels: data.data.state.issues.map(issue => issue.name),
+                datasets: [{
+                  label: 'Score',
+                  data: data.data.state.issues.map(issue => issue.value),
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+
+            // state_issues.forEach(issue => {
+            //   let li = document.createElement('li')
+            //   li.setAttribute('data-id',document.createTextNode(issue.kind))
+            //   li.setAttribute('data-value',document.createTextNode(issue.value))
+            //   let textNode = document.createTextNode(`${issue.name}: ${issue.policy}. Score: ${issue.value}`)
+            //   li.appendChild(textNode)
               
-              state_issues_list.appendChild(li)
+            //   state_issues_list.appendChild(li)
 
-            })
+            // })
         })
 
         // GOAL: trying to hide all other states when a state is click.

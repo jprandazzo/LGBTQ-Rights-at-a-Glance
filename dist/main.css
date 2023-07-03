@@ -44,6 +44,10 @@ path:hover {
   border: 1px solid black;
 }
 
+.list {
+  width: 600px;
+}
+
 #issues {
   float: right;
   position: fixed;

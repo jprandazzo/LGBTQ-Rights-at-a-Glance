@@ -24,6 +24,7 @@ export default class Button {
         const issues_list = new List(document.getElementById("issues_list"), 'block')
         state_issues_list.toggleHide()
         back_button.style.display = 'none'
+        myChart.style.display = 'none'
 
         
         //     debugger
