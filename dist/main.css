@@ -1,30 +1,30 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-#main > h1 {
-  border: 4px solid purple;
-  padding: 20px;
-  color: purple;
+#title {
+  position: relative;
+  background-color: transparent;
+  z-index: 2;
+}
+
+#title::before {
+  content: "";
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 500px;
+  height: 220px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 #us_map {
   float: left;
-}
-
-.color_grey {
-  fill: #989898 !important;
-}
-
-.color_red {
-  fill: #F75B5B !important;
-}
-
-.color_pale_green {
-  fill: #B3E5A2 !important;
-}
-
-.color_green {
-  fill: #689D55 !important;
 }
 
 path:hover {
@@ -38,7 +38,7 @@ path:hover {
   float: right;
   position: fixed;
   overflow-wrap: normal;
-  right: 100px;
+  right: 60px;
 }
 
 ul {
@@ -71,24 +71,15 @@ ul:first-child {
   background-color: #D3D3D3;
 }
 
-#back_button p {
-  border: 1px solid black;
-}
-
-.list {
-  max-width: 1000px;
+#back_button {
+  background-color: #ddd;
+  position: fixed;
 }
 
 #myChart {
-  width: 700px;
-  height: auto;
-}
-
-#issues {
-  float: right;
-  position: fixed;
-  right: 20px;
-  color: blue;
+  width: 800px;
+  height: 500px;
+  margin-top: 75px;
 }
 
 :hover {

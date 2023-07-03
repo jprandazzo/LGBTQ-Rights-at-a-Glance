@@ -1,5 +1,5 @@
 import Button from "./scripts/button"
-import Example from "./scripts/example"
+import Title from "./scripts/title"
 import List from "./scripts/list"
 import Issue from "./scripts/issues_chart"
 import {getIssuesData,getStateData} from "./scripts/fetch"
@@ -19,7 +19,7 @@ let setColor = function(score) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const title = new Example (document.getElementById("title"))
+    const title = new Title (document.getElementById("title"))
 
     const back_button = new Button(document.getElementById("back_button"), 'Go Back', 'none')
 
@@ -32,11 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // let grapharea = document.getElementById('myChart').getContext('2d');
 // let myChart = new Chart(grapharea, {type:'bar'})
-
-let map = document.getElementById('us_map');
-let map_bg = document.createElement('div');
-map_bg.setAttribute('id','bg_flag');
-map.appendChild(map_bg);
 
 getIssuesData()
     .then(data => { 

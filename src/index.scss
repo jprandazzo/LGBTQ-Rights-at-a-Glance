@@ -1,4 +1,4 @@
-@import "./styles/example.scss";
+@import "./styles/title.scss";
 @import "./styles/us_map.scss";
 @import "./styles/list.scss";
 @import "./styles/button.scss";
@@ -8,30 +8,12 @@
 //     color: $color;
 // }
 
-// #us_map::after {    
-//     content: "";
-//     background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
-//     background-size: cover;
-//     position: absolute;
-//     top: 0px;
-//     right: 0px;
-//     bottom: 0px;
-//     left: 0px;
-//     opacity: 0.25;
+// #issues {
+//     float:right;
+//     position: fixed;
+//     right:20px;
+//     color: blue;
 // }
-
-// #bg_flag {
-//     background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
-//     background-size: contain;
-//     opacity: .25;
-// }
-
-#issues {
-    float:right;
-    position: fixed;
-    right:20px;
-    color: blue;
-}
   
 //   ul li:last-child {
 //     border-bottom: none

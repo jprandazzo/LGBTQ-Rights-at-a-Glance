@@ -36,6 +36,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
             // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
 
+            Chart.defaults.font.size = 16;
             myChart = new Chart(grapharea, {
               type: 'bar',
               data: {
@@ -48,6 +49,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
                 }]
               },
               options: {
+                maintainAspectRatio: false,
                 plugins: {
                   tooltip: {
                     displayColors: false,
@@ -66,16 +68,6 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
               }
             });
 
-            // state_issues.forEach(issue => {
-            //   let li = document.createElement('li')
-            //   li.setAttribute('data-id',document.createTextNode(issue.kind))
-            //   li.setAttribute('data-value',document.createTextNode(issue.value))
-            //   let textNode = document.createTextNode(`${issue.name}: ${issue.policy}. Score: ${issue.value}`)
-            //   li.appendChild(textNode)
-              
-            //   state_issues_list.appendChild(li)
-
-            // })
         })
 
         // GOAL: trying to hide all other states when a state is click.
