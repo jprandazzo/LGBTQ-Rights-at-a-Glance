@@ -1,3 +1,51 @@
-#main>h1{border:4px solid purple;padding:20px}#main{color:purple}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+#main > h1 {
+  border: 4px solid purple;
+  padding: 20px;
+  color: purple;
+}
 
-/*# sourceMappingURL=main.css.map*/
+#us_map {
+  float: left;
+}
+
+.color_red {
+  fill: #F75B5B !important;
+}
+
+.color_pale_green {
+  fill: #B3E5A2 !important;
+}
+
+.color_green {
+  fill: #689D55 !important;
+}
+
+path:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.list {
+  float: right;
+  position: fixed;
+  overflow-wrap: normal;
+  right: 100px;
+}
+
+#issues_list li:hover {
+  cursor: pointer;
+  background-color: #D3D3D3;
+}
+
+#back_button p {
+  border: 1px solid black;
+}
+
+#issues {
+  float: right;
+  position: fixed;
+  right: 20px;
+}

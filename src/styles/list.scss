@@ -1,0 +1,11 @@
+.list {
+    float:right;
+    position: fixed;
+    overflow-wrap: normal;
+    right:100px;
+}
+
+#issues_list li:hover {
+    cursor: pointer;
+    background-color: #D3D3D3;
+}
