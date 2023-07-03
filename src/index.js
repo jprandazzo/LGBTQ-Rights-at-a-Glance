@@ -6,6 +6,7 @@ import {getIssuesData} from "./scripts/fetch"
 import {loadmap,setClass} from "./scripts/us_map"
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const title = new Example (document.getElementById("title"))
 
     const back_button = new Button(document.getElementById("back_button"), 'Go Back', 'none')
@@ -48,6 +49,3 @@ getIssuesData()
         // If our fetch was unnsuccessful, here we can handle our error(s)
         console.error('There has been a problem with your fetch operation: ', error);
     });
-
-
-    
