@@ -3,7 +3,19 @@ import Example from "./scripts/example"
 import List from "./scripts/list"
 import Issue from "./scripts/issues_chart"
 import {getIssuesData,getStateData} from "./scripts/fetch"
-import {loadmap,setClass} from "./scripts/us_map"
+import {loadmap} from "./scripts/us_map"
+
+let setColor = function(score) {
+    if (score <0) {
+        return '#F75B5B'
+    } else if (score === 0) {
+      return '#989898'
+    } else if (score === 1 || score === 1) {
+        return '#B3E5A2'
+    } else if (score > 1) {
+        return '#689D55'
+    }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -38,7 +50,7 @@ getIssuesData()
                 let pathId = document.querySelector(`#${state.id}`)
                 pathId.setAttribute('data-value',`${state.value}`)
                 pathId.setAttribute('data-policy',`${state.policy}`)
-                pathId.setAttribute('class',setClass(state.value))
+                pathId.style.fill = setColor(state.value)
                 // debugger
             })
             })

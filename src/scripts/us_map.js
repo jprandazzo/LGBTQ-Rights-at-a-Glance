@@ -32,8 +32,6 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
             let state_description = data.data.state.score.description // (e.g. "High Priority to Achieve Basic Equality")
             let state_kind = data.data.state.score.kind
             let state_issues = data.data.state.issues.map((issue, idx) => {return {x:idx,y:issue.value, policy: issue.policy}})
-            debugger
-            // debugger
 
             // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
@@ -45,12 +43,14 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
                 datasets: [{
                   label: `Score on each issue for state of ${state_name}`,
                   data: state_issues,
-                  borderWidth: 1
+                  borderWidth: 1,
+                  backgroundColor: state_issues.map(el => setColor(el.y))
                 }]
               },
               options: {
                 plugins: {
                   tooltip: {
+                    displayColors: false,
                     callbacks: {
                       label: ((tooltipItem,data) =>{
                           return `Policy: ${tooltipItem.raw.policy}`
@@ -93,16 +93,16 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
   })
 }
 
-let setClass = function(score) {
+let setColor = function(score) {
     if (score <0) {
-        return 'color_red'
+        return '#F75B5B'
     } else if (score === 0) {
-      return 'color_grey'
+      return '#989898'
     } else if (score === 1 || score === 1) {
-        return 'color_pale_green'
+        return '#B3E5A2'
     } else if (score > 1) {
-        return 'color_green'
+        return '#689D55'
     }
 }
 
-export {loadmap,setClass}
+export {loadmap,setColor}
