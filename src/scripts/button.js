@@ -6,7 +6,7 @@ export default class Button {
         this.obj.innerHTML = `<button>${text}</button>`;
         this.obj.style.display = displayStatus
         // debugger
-        // this.obj.style.display = "none"
+        this.obj.style.display = "none"
         this.handleClick = this.handleClick.bind(this);
         this.obj.addEventListener("click", this.handleClick);
     }
@@ -20,10 +20,12 @@ export default class Button {
     }
 
     handleClick() {
-        let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
+        // let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
         const issues_list = new List(document.getElementById("issues_list"), 'block')
-        state_issues_list.toggleHide()
+        // state_issues_list.toggleHide()
         back_button.style.display = 'none'
+        myChart.style.display = 'none'
+        document.querySelectorAll('path').forEach(state => state.style.fill = '#f9f9f9')
 
         
         //     debugger
