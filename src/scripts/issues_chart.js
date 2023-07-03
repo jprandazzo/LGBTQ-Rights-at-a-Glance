@@ -1,4 +1,4 @@
-export default class Issue {
+export default class Chart {
     constructor(obj) {
         this.obj = obj.node;
         this.name = obj.node.name;
