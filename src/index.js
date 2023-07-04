@@ -3,6 +3,7 @@ import Title from "./scripts/title"
 import List from "./scripts/list"
 import Issue from "./scripts/issues_chart"
 import {getIssuesData,getStateData} from "./scripts/fetch"
+import Navbar from "./scripts/navbar"
 import {loadmap} from "./scripts/us_map"
 
 let setColor = function(score) {
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // const state_issues_list = new List(document.getElementById("state_issues_list"), 'none')
 
+    const navbar = new Navbar(document.getElementById('navbar'))
     loadmap();
 })
 
