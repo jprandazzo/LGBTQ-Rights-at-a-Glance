@@ -1,6 +1,7 @@
 .list {
     font-size: 24;
     font-family: sans-serif;
+    color: white;
     float:right;
     position: fixed;
     overflow-wrap: normal;
@@ -9,17 +10,20 @@
 ul {
     list-style-type: none;
     padding: 20px;
-    border: 3px solid #ddd;
-    background-color: #989898;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: midnightblue;
+    ;
   }
   
 ul li {
     text-align: center;
+    color: black;
     padding: 6px 16px;
     margin: 4px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ddd;
+    border-radius: 20px;
+    background-color: #cdebf9;
     // border-top: 1px solid #ddd;
 }
 
@@ -34,5 +38,5 @@ ul:first-child {
 
 #issues_list li:hover {
     cursor: pointer;
-    background-color: #D3D3D3;
+    filter: brightness(0.8)
 }

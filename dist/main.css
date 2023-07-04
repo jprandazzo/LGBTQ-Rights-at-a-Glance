@@ -3,11 +3,15 @@
   \*************************************************************************************************************************************/
 #title {
   position: relative;
-  background-color: transparent;
+  background-color: cdebf9;
   z-index: 2;
 }
 
-#title::before {
+#us_map {
+  float: left;
+}
+
+#us_map::before {
   content: "";
   display: block;
   margin-left: auto;
@@ -16,15 +20,11 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 500px;
-  height: 220px;
+  width: 2000px;
+  height: 720px;
   position: absolute;
   z-index: -1;
   opacity: 0.4;
-}
-
-#us_map {
-  float: left;
 }
 
 path:hover {
@@ -35,6 +35,7 @@ path:hover {
 .list {
   font-size: 24;
   font-family: sans-serif;
+  color: white;
   float: right;
   position: fixed;
   overflow-wrap: normal;
@@ -44,17 +45,19 @@ path:hover {
 ul {
   list-style-type: none;
   padding: 20px;
-  border: 3px solid #ddd;
-  background-color: #989898;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: midnightblue;
 }
 
 ul li {
   text-align: center;
+  color: black;
   padding: 6px 16px;
   margin: 4px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #ddd;
+  border-radius: 20px;
+  background-color: #cdebf9;
 }
 
 #issues_list {
@@ -68,7 +71,7 @@ ul:first-child {
 
 #issues_list li:hover {
   cursor: pointer;
-  background-color: #D3D3D3;
+  filter: brightness(0.8);
 }
 
 #back_button {
@@ -91,8 +94,9 @@ ul:first-child {
 #navbar li {
   display: inline-block;
   padding: 8px;
-  border-radius: 0;
-  background-color: #dddddd;
+  border-radius: 2px;
+  font-family: sans-serif;
+  background-color: white;
 }
 
 #navbar:last-child {
@@ -102,6 +106,7 @@ ul:first-child {
 
 #navbar li:hover {
   cursor: pointer;
+  filter: brightness(0.8);
 }
 
 :hover {

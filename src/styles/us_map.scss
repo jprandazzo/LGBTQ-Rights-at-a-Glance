@@ -1,6 +1,26 @@
 #us_map {
-    float:left
+    float:left;
 };
+
+#us_map::before {   
+    content: '';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2000px;
+    height: 720px;
+    position: absolute;
+    z-index: -1;
+    // top: 0px;
+    // right: 0px;
+    // bottom: 0px;
+    // left: 0px;
+    opacity: 0.4;
+}
 
 // .color_grey {
 //     fill: #989898 !important
