@@ -4,26 +4,29 @@ export default class Button {
     constructor(obj, text, displayStatus) {
         this.obj = obj;
         this.obj.innerHTML = `${text}`;
-        this.obj.style.display = displayStatus
+        this.obj.setAttribute('class',displayStatus)
         // debugger
-        this.obj.style.display = "none"
+        this.obj.style.display = "block"
         this.handleClick = this.handleClick.bind(this);
         this.obj.addEventListener("click", this.handleClick);
     }
 
-    toggleHide(){
-        if (this.obj.style.display === "none") {
-          this.obj.style.display = "block";
-        } else {
-          this.obj.style.display = "none";
-        }
+    greyOut() {
+        this.obj.removeEventListener("click",this.handleClick)
+        this.obj.setAttribute('class','greyedOut')
+    }
+
+    setActive() {
+        this.obj.addEventListener("click", this.handleClick);
+        this.obj.setAttribute('class','normal')
     }
 
     handleClick() {
         // let state_issues_list = new List(document.getElementById('state_issues_list'),"block")
         const issues_list = new List(document.getElementById("issues_list"), 'block')
         // state_issues_list.toggleHide()
-        back_button.style.display = 'none'
+        this.greyOut();
+        debugger
         myChart.style.display = 'none'
         document.querySelectorAll('path').forEach(state => state.style.fill = '#f9f9f9')
 

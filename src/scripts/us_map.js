@@ -1,5 +1,6 @@
 import {getStateData} from "./fetch"
 import List from "./list"
+import Button from './button'
 const issues_list = new List(document.getElementById("issues_list"),"block")
 // const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
@@ -14,6 +15,8 @@ const issues_list = new List(document.getElementById("issues_list"),"block")
 let grapharea = document.getElementById('myChart');
 let myChart = new Chart(grapharea, {type:'bar'});
 myChart.globalCompositeOperation='destination-over';
+grapharea.style.display = 'none';
+
 
 let loadmap = function() {d3.xml("src/scripts/us.svg")
   .then(data => {
@@ -22,10 +25,11 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 
     d3.selectAll('path').on('click',() =>{
         issues_list.obj.style.display = 'none';
+        grapharea.style.display = 'block';
         let state_id = d3.event.target.id;
         // state_issues_list.clearList();
-        // debugger
-        back_button.style.display = 'block';
+        let back_button = new Button(document.getElementById("back_button"), 'Clear Selection', 'greyedOut')
+        back_button.setActive();
         getStateData(state_id)
           .then(data =>{
             let state_name = data.data.state.name
@@ -42,7 +46,6 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
               data: {
                 labels: data.data.state.issues.map(issue => issue.name),
                 datasets: [{
-                  label: `Score on each issue for state of ${state_name}`,
                   data: state_issues,
                   borderWidth: 1,
                   backgroundColor: state_issues.map(el => setColor(el.y))
@@ -51,6 +54,13 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
               options: {
                 maintainAspectRatio: false,
                 plugins: {
+                  legend: {
+                    display: false
+                  },
+                  title: {
+                    display: true,
+                    text: `Score on each issue for state of ${state_name}`
+                  },
                   tooltip: {
                     displayColors: false,
                     callbacks: {

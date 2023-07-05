@@ -8,6 +8,18 @@
   color: white;
   font-family: "Roboto", sans-serif;
   text-shadow: 1px 1px 3px black;
+  border-top: 5px solid #b1a296;
+  border-bottom: 5px solid #b1a296;
+  margin-top: -8px;
+}
+
+h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25;
+  bottom: 0;
+  margin: 0 auto;
 }
 
 #flag {
@@ -19,14 +31,49 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 230px;
-  height: 130px;
+  height: 140px;
   position: absolute;
   z-index: 1;
   opacity: 0.8;
 }
 
+#instructions {
+  position: absolute;
+  text-align: center;
+  line-height: 10px;
+  border: 8px solid #faf9f5;
+  color: black;
+  background-color: #faf9f5;
+  text-shadow: 1px 1px 12px grey;
+  border-bottom: 10px solid #faf9f5;
+  border-radius: 50%;
+  right: 50px;
+  top: 50px;
+  bottom: 50px;
+  padding: 5;
+  margin: auto 0;
+}
+
+#github {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  bottom: 0;
+  margin: auto 0;
+}
+
+#linkedin {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  bottom: 0;
+  margin: auto 0;
+}
+
 #us_map {
   float: left;
+  background-color: transparent;
+  margin-top: 150px;
 }
 
 path:hover {
@@ -35,28 +82,31 @@ path:hover {
 }
 
 .list {
-  font-size: 24;
+  font-size: 32;
   font-family: sans-serif;
   text-shadow: 1px 1px 3px black;
   color: #FAF9F6;
   float: right;
   position: fixed;
   overflow-wrap: normal;
-  right: 60px;
+  right: 40px;
+  background-color: transparent;
 }
 
 ul {
   list-style-type: none;
   padding: 20px;
-  border: 2px solid #557A95;
+  border: 3px solid #b1a296;
   border-radius: 3px;
   background-color: #7395AE;
 }
 
 ul li {
   text-align: center;
+  font-size: 22;
   color: black;
   text-shadow: none;
+  text-shadow: 1px 1px 15px grey;
   padding: 6px 16px;
   margin: 4px;
   border: 1px solid #ddd;
@@ -65,6 +115,7 @@ ul li {
 }
 
 #issues_list {
+  margin-top: 150px;
   text-align: center;
   padding: 0px 0px 0px 0px;
 }
@@ -78,11 +129,12 @@ ul:first-child {
   filter: brightness(0.8);
 }
 
-#back_button {
+.normal {
   background-color: #FAF9F6;
   position: fixed;
   left: 500px;
-  top: 200px;
+  top: 300px;
+  text-shadow: 0px 0px 20px grey;
   padding: 1px 5px 1px 5px;
   font-family: "Tahoma", serif;
   font-size: 21;
@@ -90,7 +142,20 @@ ul:first-child {
   border: 1px solid black;
 }
 
-#back_button:hover {
+.greyedOut {
+  background-color: #FAF9F6;
+  position: fixed;
+  left: 500px;
+  top: 300px;
+  padding: 1px 5px 1px 5px;
+  font-family: "Tahoma", serif;
+  font-size: 21;
+  border-radius: 8px;
+  border: 1px solid black;
+  opacity: 0.2;
+}
+
+.normal:hover {
   cursor: pointer;
 }
 
@@ -100,32 +165,17 @@ ul:first-child {
   margin-top: 75px;
 }
 
-#navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  background-color: #b1a296;
-
-}
-
-#navbar li {
-  display: inline-block;
-  padding: 8px;
-
-  border-radius: 2px;
-  font-family: sans-serif bold;
-  background-color: white;
-
-#navbar:last-child {
-  border-radius: 50px;
-  background-color: blue;
-
-#navbar li:hover {
-  cursor: pointer;
-
-  filter: brightness(0.8);
-
+#background {
+  background: url("../src/styles/stonewall.png");
+  opacity: 1;
+  position: absolute;
+  margin-top: -100;
+  width: 1777px;
+  height: 900px;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: none;
+  opacity: 0.3;
 }
 
 :hover {
