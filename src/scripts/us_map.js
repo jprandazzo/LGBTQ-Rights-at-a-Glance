@@ -21,7 +21,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
     .node().append(data.documentElement)
 
     d3.selectAll('path').on('click',() =>{
-        issues_list.toggleHide()
+        issues_list.obj.style.display = 'none';
         let state_id = d3.event.target.id;
         // state_issues_list.clearList();
         // debugger
@@ -89,7 +89,7 @@ let setColor = function(score) {
     if (score <0) {
         return '#F75B5B'
     } else if (score === 0) {
-      return '#989898'
+      return '#5d5c61'
     } else if (score === 1 || score === 1) {
         return '#B3E5A2'
     } else if (score > 1) {

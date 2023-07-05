@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const title = new Title (document.getElementById("title"))
 
-    const back_button = new Button(document.getElementById("back_button"), 'Go Back', 'none')
+    const back_button = new Button(document.getElementById("back_button"), 'Clear Selection', 'none')
 
     const issues_list = new List(document.getElementById("issues_list"), 'block')
     
@@ -49,6 +49,7 @@ getIssuesData()
                 pathId.setAttribute('data-value',`${state.value}`)
                 pathId.setAttribute('data-policy',`${state.policy}`)
                 pathId.style.fill = setColor(state.value)
+                back_button.style.display = 'block';
                 // debugger
             })
             })

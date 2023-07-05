@@ -4,8 +4,6 @@ export default class Navbar {
 
         this.createLI = this.createLI.bind(this);
         
-        this.createLI('Issue Map')
-        this.createLI('Resources')
         this.createLI('i')
     }
 
