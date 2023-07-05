@@ -1,28 +1,31 @@
 // $color: purple; // (define here so if you have one color used a bunch of places, you don't have to change it everywhere, you can just change it once)
 #title {
     position: relative;
-    background-color: transparent;
-    z-index: 2;
+    display: block;
+    background-color: #557a95;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px black;
+    // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-#title::before {   
+#flag {   
     content: '';
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
     background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 500px;
-    height: 220px;
+    width: 230px;
+    height: 130px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     // top: 0px;
     // right: 0px;
     // bottom: 0px;
     // left: 0px;
-    opacity: 0.4;
+    opacity: 0.8;
 }
 
 //without adding it in index.scss, this doesn't do anything. you need to import styling into index.scss

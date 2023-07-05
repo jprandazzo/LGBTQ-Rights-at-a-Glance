@@ -3,7 +3,7 @@ import List from "./list"
 export default class Button {
     constructor(obj, text, displayStatus) {
         this.obj = obj;
-        this.obj.innerHTML = `<button>${text}</button>`;
+        this.obj.innerHTML = `${text}`;
         this.obj.style.display = displayStatus
         // debugger
         this.obj.style.display = "none"

@@ -2,13 +2,16 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #b1a296
   }
 
 #navbar li{
     display: inline-block;
     padding: 8px;
-    border-radius: 0;
-    background-color: #dddddd;
+
+    border-radius: 2px;
+    font-family: sans-serif bold;
+    background-color: white;
 }
 
 #navbar:last-child {
@@ -18,4 +21,5 @@
 
 #navbar li:hover{
     cursor: pointer;
+    filter: brightness(0.8)
 }

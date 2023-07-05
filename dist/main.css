@@ -3,24 +3,26 @@
   \*************************************************************************************************************************************/
 #title {
   position: relative;
-  background-color: transparent;
-  z-index: 2;
+  display: block;
+  background-color: #557a95;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 1px 3px black;
 }
 
-#title::before {
+#flag {
   content: "";
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  float: left;
   background-image: url("https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 500px;
-  height: 220px;
+  width: 230px;
+  height: 130px;
   position: absolute;
-  z-index: -1;
-  opacity: 0.4;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 #us_map {
@@ -29,12 +31,14 @@
 
 path:hover {
   cursor: pointer;
-  filter: brightness(0.8);
+  filter: drop-shadow(0 0 0.6em #5d5c61);
 }
 
 .list {
   font-size: 24;
   font-family: sans-serif;
+  text-shadow: 1px 1px 3px black;
+  color: #FAF9F6;
   float: right;
   position: fixed;
   overflow-wrap: normal;
@@ -44,17 +48,20 @@ path:hover {
 ul {
   list-style-type: none;
   padding: 20px;
-  border: 3px solid #ddd;
-  background-color: #989898;
+  border: 2px solid #557A95;
+  border-radius: 3px;
+  background-color: #7395AE;
 }
 
 ul li {
   text-align: center;
+  color: black;
+  text-shadow: none;
   padding: 6px 16px;
   margin: 4px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #ddd;
+  border-radius: 20px;
+  background-color: #FAF9F6;
 }
 
 #issues_list {
@@ -68,12 +75,23 @@ ul:first-child {
 
 #issues_list li:hover {
   cursor: pointer;
-  background-color: #D3D3D3;
+  filter: brightness(0.8);
 }
 
 #back_button {
-  background-color: #ddd;
+  background-color: #FAF9F6;
   position: fixed;
+  left: 500px;
+  top: 200px;
+  padding: 1px 5px 1px 5px;
+  font-family: "Tahoma", serif;
+  font-size: 21;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+#back_button:hover {
+  cursor: pointer;
 }
 
 #myChart {
@@ -86,22 +104,28 @@ ul:first-child {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  background-color: #b1a296;
+
 }
 
 #navbar li {
   display: inline-block;
   padding: 8px;
-  border-radius: 0;
-  background-color: #dddddd;
-}
+
+  border-radius: 2px;
+  font-family: sans-serif bold;
+  background-color: white;
 
 #navbar:last-child {
   border-radius: 50px;
   background-color: blue;
-}
 
 #navbar li:hover {
   cursor: pointer;
+
+  filter: brightness(0.8);
+
 }
 
 :hover {

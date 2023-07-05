@@ -1,6 +1,29 @@
 #us_map {
-    float:left
+    float:left;
+    // background-color: rgba(0, 219, 255, 0.2)
 };
+
+// #us_map::before {   
+//     content: '';
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     background-image: url('./pngtree-abstract-water-color-background-ocean-vector-image_433254.jpg');
+//     // background-image: url('https://static.dezeen.com/uploads/2018/06/lgbt-pride-flag-redesign-hero.jpg');
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     width: 2000px;
+//     height: 720px;
+//     position: absolute;
+//     z-index: -1;
+//     // top: 0px;
+//     // right: 0px;
+//     // bottom: 0px;
+//     // left: 0px;
+    // opacity: 0.4;
+    
+// }
 
 // .color_grey {
 //     fill: #989898 !important
@@ -21,5 +44,6 @@
 path:hover {
     cursor: pointer;
     // fill: blue !important
-    filter: brightness(0.8);
+    filter: drop-shadow(0 0 .6em #5d5c61);
+    // filter: brightness(0.8);
 }
