@@ -4,7 +4,7 @@ export default class Navbar {
 
         this.createLI = this.createLI.bind(this);
         
-        this.createLI('i')
+
     }
 
     createLI(item) {
