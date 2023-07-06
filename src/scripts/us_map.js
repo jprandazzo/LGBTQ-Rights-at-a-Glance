@@ -10,7 +10,7 @@ myChart.globalCompositeOperation='destination-over';
 grapharea.style.display = 'none';
 
 
-let loadmap = function() {d3.xml("https://aa-lgbtq-rights-map.s3.us-east-2.amazonaws.com/images/us.svg")
+let loadmap = function() {d3.xml("/src/images/us.svg")
   .then(data => {
     d3.select("#us_map")
     .node().append(data.documentElement)
