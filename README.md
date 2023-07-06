@@ -46,6 +46,7 @@ automatically, and when active, it turns the cursor to `pointer` and dims the br
 ###Other key styling
 Careful attention was paid to color, size, borders, padding, and margin to each element on the page in order to make the page look as dynamic
 and professional as possible:
+
 <img width="466" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/6b0c875a-2f9f-477c-8d6b-ea7de7890bf1">
 
 Each `path` on hover was directed to turn the cursor to `pointer`, to dim its `brightness` to .8, add a `drop-shadow` filter, and `transform` (enlarge) the path slightly to make it 
