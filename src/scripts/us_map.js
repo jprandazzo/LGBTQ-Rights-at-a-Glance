@@ -4,14 +4,6 @@ import Button from './button'
 const issues_list = new List(document.getElementById("issues_list"),"block")
 // const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
-// const toggleHide = function(target){
-//     if (target.style.display === "none") {
-//       target.style.display = "block";
-//     } else {
-//       target.style.display = "none";
-//     }
-// }
-
 let grapharea = document.getElementById('myChart');
 let myChart = new Chart(grapharea, {type:'bar'});
 myChart.globalCompositeOperation='destination-over';
