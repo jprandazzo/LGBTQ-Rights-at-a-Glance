@@ -18,18 +18,23 @@ active and one can click it to clear the screen and start over.
 
 ### Fetch/Graph
 The data is fetched from the following HRC API endpoint: https://hrc-lgbtq-2020.herokuapp.com/api,
+
 <img width="660" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/2606bfa4-d48a-496c-ad29-319765eae761">
 
 the scores for each attribute are then added to each state's path tag in the SVG map,
+
 <img width="1086" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/ab7b068a-3c0a-4d00-8ab9-ad6c8f007e6c">
 
 and finally, a function SetColor assigns a color to the state (path) depending on the value returned.
+
 <img width="335" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/27747142-7924-4869-935c-05d9089937ac">
 
 There are event listeners added to each state's path tag which fetch the state data on that specific state,
+
 <img width="515" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/4c0e5b3c-1c6a-40b7-93fa-998cecdd6109">
 
 and that data is used to generate a bar chart whose values are filled in based on the scores returned by that fetch:
+
 <img width="490" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/777406ae-7947-480d-bf08-86b1d72c59e0">
 
 ### Button - Clear Selection
@@ -41,6 +46,7 @@ with different coloring and opacity to reflect the two states.
 
 The hover action is different depending on the state of the button - when greyed out it forces `default` instead of allowing it to become `text`
 automatically, and when active, it turns the cursor to `pointer` and dims the brightness to make it look like a real button.
+
 <img width="230" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/ae542e05-8d25-4d4a-acc6-45fe79f20f03">
 
 ### Other key styling
