@@ -55,36 +55,36 @@ which is used to generate a bar chart whose values are filled in and color set b
 
 ### Button - Clear Selection
 
-#### Functionality
-<img width="659" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/6f966ee2-7d38-4131-95f8-c52b7890367e">
-The Button class has three functions defined on it: `greyOut`, `setActive`, and `handleClick`. `handleClick` takes the list of issues and changes the `display`
+#### Button - Functionality
+The `Button` class has three functions defined on it: `greyOut`, `setActive`, and `handleClick`. `handleClick` takes the list of issues and changes the `display`
 attribute from `none` to `block`, hides the bar chart (`display: none`), iterates through all `path` elements to `fill` each with its default color `#f9f9f9`, and 
 finally greys itself out.
 
-#### Styling
-The Clear Selection button has two states, greyed out (when nothing is selected), and normal (when either a state or an issue is selected),
+<img width="659" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/6f966ee2-7d38-4131-95f8-c52b7890367e">
+
+#### Button - Styling
+The `Clear Selection` button has two states, greyed out (when nothing is selected), and normal (when either a state or an issue is selected),
 with different coloring and opacity to reflect the two states.
 
 <img width="293" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/bbbf10c9-8a54-4d32-97e4-a5d1f090be41"> <img width="286" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/43c1e44a-2410-4662-8116-d68272d715c0">
 
-
-The hover action is different depending on the state of the button - when greyed out it forces `default` instead of allowing it to become `text`
-automatically, and when active, it turns the cursor to `pointer` and dims the brightness to make it look like a real button.
+The hover action is different depending on the state of the button - when greyed out it assigns `cursor: default` instead of allowing it to become a `text` selector, 
+and when active, it turns the cursor to `pointer` and dims the brightness to make it look like a real button.
 
 <img width="230" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/ae542e05-8d25-4d4a-acc6-45fe79f20f03">
 
 ### Other key styling
-Careful attention was paid to color, size, borders, padding, and margin to each element on the page in order to make the page look as dynamic
+Careful attention was paid to color, size, borders, padding, and margin of each element on the page in order to make the page look as dynamic
 and professional as possible:
 
 <img width="466" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/6b0c875a-2f9f-477c-8d6b-ea7de7890bf1">
 
-Each `path` on hover was directed to turn the cursor to `pointer`, to dim its `brightness` to .8, add a `drop-shadow` filter, and `transform` (enlarge) the path slightly to make it 
-appear to "pop" out of the screen, as an attention-grabbing clickable button should.
+Each `path` on hover turns the `cursor` to `pointer`, dims its `brightness`, adds a `drop-shadow` filter, and subtly `transform`s (larger scale) the path to make it 
+appear to "pop" out of the screen, as an attention-grabbing clickable item should.
 
 <img width="461" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/c7c4d7c2-7e27-404f-8d84-8a3d26b7cc44">
 
-All text is given a custom text-shadow depending on its location/color/context, in order to make the page look less sterile and instead warm and comfortable.
+All text is given a custom `text-shadow` depending on its location/color/context, in order to make the page look warm and comfortable (vs sharp and sterile).
 
 <img width="329" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/f1b4c262-0bfd-4148-8b89-35f0c64dc10c">
 
@@ -95,8 +95,12 @@ All text is given a custom text-shadow depending on its location/color/context, 
 
 
 ## Future Roadmap
+
+### Efficiency - Save Fetch Data
+Each click on an issue or on a state currently performs a new fetch request, which is not optimally efficient. The code should be refactored to save all data to an object, so the assignment to list items, etc can be made without further external API calls.
+
 ### Legend
-The primary improvement is a legend that shows all colors and their respective score bands to make it immediately obvious to the user what any color means.
+The most important feature to be added is a legend that shows all colors and their respective score bands to make it immediately obvious to the user what any color means.
 
 ### Keep selected item filtered, Zoom in on states when clicked
 Another key feature release would be to keep a selected item lit up so the user always knows what their most recent selection has been (i.e. what issue currently
