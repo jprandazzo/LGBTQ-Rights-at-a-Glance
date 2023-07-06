@@ -1,6 +1,6 @@
 # LGBTQ-Rights-at-a-Glance
 
-The purpose of this project is to showcase the status of LGBTQ+ rights across the US, easily sliced either by issue (showing all states), or by state (showing all issues in that state).
+The purpose of [this project](url) is to showcase the status of LGBTQ+ rights across the US, easily sliced either by issue (showing all states), or by state (showing all issues in that state).
 The functionality is straightforward and the data (coming from the Human Rights Campaign) is insightful. The background image shows queer culture trailblazers Marsha P. Johnson and Sylvia Rivera at the Stonewall Riots, a poignant reminder that to progress forward, we have to remember where we come from and those whose passion and sacrifices got us this far.
 
 <img width="1792" alt="Screenshot 2023-07-06 at 9 11 14 AM" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/72ddc30d-ee52-41ab-a4cb-a90bd2c52797">
