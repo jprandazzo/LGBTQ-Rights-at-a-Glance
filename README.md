@@ -35,6 +35,7 @@ and that data is used to generate a bar chart whose values are filled in based o
 ###Button - Clear Selection
 The Clear Selection button has two states, greyed out (when nothing is selected), and normal (when either a state or an issue is selected),
 with different coloring and opacity to reflect the two states.
+
 <img width="293" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/bbbf10c9-8a54-4d32-97e4-a5d1f090be41"> <img width="286" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/43c1e44a-2410-4662-8116-d68272d715c0">
 
 
