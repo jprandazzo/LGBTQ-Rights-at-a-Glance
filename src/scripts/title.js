@@ -2,7 +2,7 @@ import List from './list'
 class Title {
     constructor(ele) {
         this.ele = ele;
-        this.ele.innerHTML = "<h1>LGBTQ+ Rights Across the US</h1><br><br><p>No Pride For Some of Us Without Liberation For All of Us</h3>";
+        this.ele.innerHTML = "<h1>LGBTQ+ Rights Across the US</h1><br><br><br><span>No Pride For Some of Us Without Liberation For All of Us</span>";
         this.ele.style.width = 'auto';
         this.ele.style.height = '100px';
         // this.ele.style.display = 'flex';
@@ -11,9 +11,13 @@ class Title {
         this.ele.style.textAlign = 'center'
         this.ele.style.fontSize = '26'
 
-        let instructions = document.createElement('span')
+        let instructions = document.createElement('div')
         instructions.setAttribute('id','instructions')
         instructions.innerHTML = 'i'
+        instructions.addEventListener('click',() =>{
+            let info = document.getElementById('info');
+            info.removeAttribute('class','hidden')
+        })
         instructions.style.cssFloat = 'right'
 
         this.ele.appendChild(instructions)
