@@ -27,9 +27,6 @@ ul li {
     border: 1px solid #ddd;
     border-radius: 20px;
     background-color: #FAF9F6;
-    // text-shadow: 1px 1px 5px black;
-    // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    // border-top: 1px solid #ddd;
 }
 
 #issues_list {
@@ -42,10 +39,9 @@ ul:first-child {
     padding: 200px 0px 0px 0px;
 }
 
-
-
 #issues_list li:hover {
     cursor: pointer;
     filter: brightness(0.8) drop-shadow(0 0 .1em #5d5c61);
     transform: scale(1.01);
 }
+
