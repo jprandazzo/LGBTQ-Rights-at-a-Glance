@@ -3,7 +3,6 @@ import Title from "./scripts/title"
 import List from "./scripts/list"
 import Issue from "./scripts/issues_chart"
 import {getIssuesData,getStateData} from "./scripts/fetch"
-import Navbar from "./scripts/navbar"
 import {loadmap} from "./scripts/us_map"
 import Info from "./scripts/info"
 
@@ -23,22 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const title = new Title (document.getElementById("title"))
 
-    // debugger
     let back_button = new Button(document.getElementById("back_button"), 'Clear Selection', 'greyedOut')
 
     const issues_list = new List(document.getElementById("issues_list"), 'block')
 
     const info = new Info(document.getElementById('info'))
-    
-    // const state_issues_list = new List(document.getElementById("state_issues_list"), 'none')
-
-    // const navbar = new Navbar(document.getElementById('navbar'))
 
     loadmap();
 })
-
-// let grapharea = document.getElementById('myChart').getContext('2d');
-// let myChart = new Chart(grapharea, {type:'bar'})
 
 getIssuesData()
     .then(data => { 
