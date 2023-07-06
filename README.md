@@ -61,7 +61,7 @@ The Button class has three functions defined on it: `greyOut`, `setActive`, and 
 attribute from `none` to `block`, hides the bar chart (`display: none`), iterates through all `path` elements to `fill` each with its default color `#f9f9f9`, and 
 finally greys itself out.
 
-#### Stlying
+#### Styling
 The Clear Selection button has two states, greyed out (when nothing is selected), and normal (when either a state or an issue is selected),
 with different coloring and opacity to reflect the two states.
 
@@ -81,6 +81,17 @@ and professional as possible:
 
 Each `path` on hover was directed to turn the cursor to `pointer`, to dim its `brightness` to .8, add a `drop-shadow` filter, and `transform` (enlarge) the path slightly to make it 
 appear to "pop" out of the screen, as an attention-grabbing clickable button should.
+
+<img width="461" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/c7c4d7c2-7e27-404f-8d84-8a3d26b7cc44">
+
+All text is given a custom text-shadow depending on its location/color/context, in order to make the page look less sterile and instead warm and comfortable.
+
+<img width="329" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/f1b4c262-0bfd-4148-8b89-35f0c64dc10c">
+
+<img width="305" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/b9789976-1a7c-4a7a-9c73-9355954816d4">
+
+<img width="322" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/fda1cb40-4888-4311-a66a-825b00aec86c">
+
 
 
 ## Future Roadmap
