@@ -1,4 +1,10 @@
-// $color: purple; // (define here so if you have one color used a bunch of places, you don't have to change it everywhere, you can just change it once)
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.cdnfonts.com/css/handwriting');
+@font-face {
+    font-family: 'Youth Touch';
+    src: url('/src/styles/YouthTouchDemoRegular-4VwY.ttf');
+ }
+
 #title {
     position: relative;
     display: block;
@@ -16,9 +22,14 @@ h1 {
     position: absolute;
     left: 0;
     right: 0;
-    top: 25;
-    bottom: 0;
+    bottom: 50;
+    font-size: 70;
     margin: 0 auto;
+}
+
+p {
+    font-family: 'Youth Touch', sans-serif;
+    font-size: 35;
 }
 
 #flag {   
@@ -50,25 +61,55 @@ h1 {
     text-shadow: 1px 1px 12px grey;
     border-bottom: 10px solid #faf9f5;
     border-radius: 50%;
-    right: 50px;
+    right: 150px;
     top: 50px;
-    bottom: 50px;
+    bottom: 47px;
     padding: 5;
     margin: auto 0;
 }
 
+#instructions:hover {
+    cursor: pointer;
+    filter: brightness(0.8) drop-shadow(0 0 .1em #5d5c61);
+    transform: scale(1.08);
+}
+
 #github {
     position: absolute;
-    right: 50px;
-    top: 50px;
+    // width: 20px;
+    right: 0px;
+    top: 15px;
     bottom: 0;
     margin: auto 0;
 }
 
+#github img {
+    max-width: 43%;
+    border-radius: 50%;
+    border: 1px solid #d3d3d3;
+    background-color: white;
+}
+
+#github img:hover {
+    filter: brightness(.9);
+    max-width: 45%;
+}
+
 #linkedin {
     position: absolute;
-    right: 50px;
-    top: 50px;
-    bottom: 0;
-    margin: auto 0;
+    right: -220px;
+    top: 70px;
+    bottom: 100;
+}
+
+#linkedin img {
+    max-width: 7%;
+    border: 1px solid #d3d3d3;
+    border-radius: 20%;
+    background-color: white
+}
+
+#linkedin img:hover {
+    filter: brightness(.9);
+    max-width: 7.5%;
 }

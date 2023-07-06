@@ -4,7 +4,7 @@
     text-shadow: 1px 1px 3px black;
     color: #FAF9F6;
     float:right;
-    position: fixed;
+    position: relative;
     overflow-wrap: normal;
     right:40px;
     background-color: transparent;
@@ -22,7 +22,7 @@ ul li {
     font-size: 22;
     color: black;
     text-shadow: none;
-    text-shadow: 1px 1px 15px grey;
+    text-shadow: 1px 1px 20px grey;
     padding: 6px 16px;
     margin: 4px;
     border: 1px solid #ddd;
@@ -43,7 +43,10 @@ ul:first-child {
     padding: 200px 0px 0px 0px;
 }
 
+
+
 #issues_list li:hover {
     cursor: pointer;
-    filter: brightness(0.8)
+    filter: brightness(0.8) drop-shadow(0 0 .1em #5d5c61);
+    transform: scale(1.01);
 }

@@ -39,7 +39,6 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
 
             // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
-
             Chart.defaults.font.size = 16;
             myChart = new Chart(grapharea, {
               type: 'bar',
@@ -77,6 +76,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
                 }
               }
             });
+            Chart.defaults.global.defaultFontColor = "#000000";
 
         })
 

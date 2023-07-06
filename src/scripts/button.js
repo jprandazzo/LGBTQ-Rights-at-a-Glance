@@ -6,7 +6,7 @@ export default class Button {
         this.obj.innerHTML = `${text}`;
         this.obj.setAttribute('class',displayStatus)
         // debugger
-        this.obj.style.display = "block"
+        this.obj.style.display = "inline"
         this.handleClick = this.handleClick.bind(this);
         this.obj.addEventListener("click", this.handleClick);
     }
@@ -26,7 +26,6 @@ export default class Button {
         const issues_list = new List(document.getElementById("issues_list"), 'block')
         // state_issues_list.toggleHide()
         this.greyOut();
-        debugger
         myChart.style.display = 'none'
         document.querySelectorAll('path').forEach(state => state.style.fill = '#f9f9f9')
 

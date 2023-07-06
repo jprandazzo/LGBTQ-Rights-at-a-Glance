@@ -1,6 +1,18 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Tangerine&display=swap);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
+@import url(https://fonts.cdnfonts.com/css/handwriting);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
+  \*****************************************************************************************************************************************/
+@font-face {
+  font-family: "Youth Touch";
+  src: url("/src/styles/YouthTouchDemoRegular-4VwY.ttf");
+}
 #title {
   position: relative;
   display: block;
@@ -17,9 +29,14 @@ h1 {
   position: absolute;
   left: 0;
   right: 0;
-  top: 25;
-  bottom: 0;
+  bottom: 50;
+  font-size: 70;
   margin: 0 auto;
+}
+
+p {
+  font-family: "Youth Touch", sans-serif;
+  font-size: 35;
 }
 
 #flag {
@@ -47,38 +64,70 @@ h1 {
   text-shadow: 1px 1px 12px grey;
   border-bottom: 10px solid #faf9f5;
   border-radius: 50%;
-  right: 50px;
+  right: 150px;
   top: 50px;
-  bottom: 50px;
+  bottom: 47px;
   padding: 5;
   margin: auto 0;
 }
 
+#instructions:hover {
+  cursor: pointer;
+  filter: brightness(0.8) drop-shadow(0 0 0.1em #5d5c61);
+  transform: scale(1.08);
+}
+
 #github {
   position: absolute;
-  right: 50px;
-  top: 50px;
+  right: 0px;
+  top: 15px;
   bottom: 0;
   margin: auto 0;
 }
 
+#github img {
+  max-width: 43%;
+  border-radius: 50%;
+  border: 1px solid #d3d3d3;
+  background-color: white;
+}
+
+#github img:hover {
+  filter: brightness(0.9);
+  max-width: 45%;
+}
+
 #linkedin {
   position: absolute;
-  right: 50px;
-  top: 50px;
-  bottom: 0;
-  margin: auto 0;
+  right: -220px;
+  top: 70px;
+  bottom: 100;
+}
+
+#linkedin img {
+  max-width: 7%;
+  border: 1px solid #d3d3d3;
+  border-radius: 20%;
+  background-color: white;
+}
+
+#linkedin img:hover {
+  filter: brightness(0.9);
+  max-width: 7.5%;
 }
 
 #us_map {
   float: left;
   background-color: transparent;
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-left: -150px;
 }
 
 path:hover {
   cursor: pointer;
-  filter: drop-shadow(0 0 0.6em #5d5c61);
+  transform: scale(1.0015);
+  -webkit-transform: scale(1.0015);
+  filter: drop-shadow(0 0 0.6em #5d5c61) brightness(0.8);
 }
 
 .list {
@@ -87,7 +136,7 @@ path:hover {
   text-shadow: 1px 1px 3px black;
   color: #FAF9F6;
   float: right;
-  position: fixed;
+  position: relative;
   overflow-wrap: normal;
   right: 40px;
   background-color: transparent;
@@ -106,7 +155,7 @@ ul li {
   font-size: 22;
   color: black;
   text-shadow: none;
-  text-shadow: 1px 1px 15px grey;
+  text-shadow: 1px 1px 20px grey;
   padding: 6px 16px;
   margin: 4px;
   border: 1px solid #ddd;
@@ -126,14 +175,15 @@ ul:first-child {
 
 #issues_list li:hover {
   cursor: pointer;
-  filter: brightness(0.8);
+  filter: brightness(0.8) drop-shadow(0 0 0.1em #5d5c61);
+  transform: scale(1.01);
 }
 
 .normal {
   background-color: #FAF9F6;
-  position: fixed;
-  left: 500px;
-  top: 300px;
+  position: relative;
+  left: 650px;
+  top: 0px;
   text-shadow: 0px 0px 20px grey;
   padding: 1px 5px 1px 5px;
   font-family: "Tahoma", serif;
@@ -144,9 +194,9 @@ ul:first-child {
 
 .greyedOut {
   background-color: #FAF9F6;
-  position: fixed;
-  left: 500px;
-  top: 300px;
+  position: relative;
+  left: 650px;
+  top: 0px;
   padding: 1px 5px 1px 5px;
   font-family: "Tahoma", serif;
   font-size: 21;
@@ -160,16 +210,17 @@ ul:first-child {
 }
 
 #myChart {
-  width: 800px;
+  width: 750px;
   height: 500px;
-  margin-top: 75px;
+  margin-top: 200px;
+  position: relative;
 }
 
 #background {
   background: url("../src/styles/stonewall.png");
   opacity: 1;
   position: absolute;
-  margin-top: -100;
+  margin-top: -150;
   width: 1777px;
   height: 900px;
   z-index: -1;
