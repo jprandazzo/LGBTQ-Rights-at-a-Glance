@@ -46,6 +46,14 @@ and that data is used to generate a bar chart whose values are filled in based o
 <img width="490" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/777406ae-7947-480d-bf08-86b1d72c59e0">
 
 ### Button - Clear Selection
+
+#### Functionality
+<img width="659" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/6f966ee2-7d38-4131-95f8-c52b7890367e">
+The Button class has three functions defined on it: `greyOut`, `setActive`, and `handleClick`. `handleClick` takes the list of issues and changes the `display`
+attribute from `none` to `block`, hides the bar chart (`display: none`), iterates through all `path` elements to `fill` each with its default color `#f9f9f9`, and 
+finally greys itself out.
+
+#### Stlying
 The Clear Selection button has two states, greyed out (when nothing is selected), and normal (when either a state or an issue is selected),
 with different coloring and opacity to reflect the two states.
 
