@@ -2,7 +2,6 @@ import {getStateData} from "./fetch"
 import List from "./list"
 import Button from './button'
 const issues_list = new List(document.getElementById("issues_list"),"block")
-// const state_issues_list = new List(document.getElementById('state_issues_list'),"block")
 
 let grapharea = document.getElementById('myChart');
 let myChart = new Chart(grapharea, {type:'bar'});
@@ -19,7 +18,6 @@ let loadmap = function() {d3.xml("https://aa-lgbtq-rights-map.s3.us-east-2.amazo
         issues_list.obj.style.display = 'none';
         grapharea.style.display = 'block';
         let state_id = d3.event.target.id;
-        // state_issues_list.clearList();
         let back_button = new Button(document.getElementById("back_button"), 'Clear Selection', 'greyedOut')
         back_button.setActive();
         getStateData(state_id)
@@ -29,7 +27,6 @@ let loadmap = function() {d3.xml("https://aa-lgbtq-rights-map.s3.us-east-2.amazo
             let state_kind = data.data.state.score.kind
             let state_issues = data.data.state.issues.map((issue, idx) => {return {x:idx,y:issue.value, policy: issue.policy}})
 
-            // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
             Chart.defaults.font.size = 16;
             myChart = new Chart(grapharea, {
@@ -68,7 +65,6 @@ let loadmap = function() {d3.xml("https://aa-lgbtq-rights-map.s3.us-east-2.amazo
                 }
               }
             });
-            // Chart.defaults.global.defaultFontColor = "#000000";
 
         })
 
