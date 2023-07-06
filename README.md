@@ -25,23 +25,28 @@ active and one can click it to clear the screen and start over.
 ## Technical details
 
 ### Fetch/Graph
-The data is fetched from the following HRC API endpoint: https://hrc-lgbtq-2020.herokuapp.com/api,
+All data in the list, map, and chart are populated *dynamically* using the results of an API fetch to the HRC: https://hrc-lgbtq-2020.herokuapp.com/api.
+This is important because if the database were to change, outside of styling (if the list of issues were to add more items), no work would be required on this page to update the charts.
 
 <img width="660" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/2606bfa4-d48a-496c-ad29-319765eae761">
 
-the scores for each attribute are then added to each state's path tag in the SVG map,
+The fetch is therefore used to: populate the unordered list of issues,
+
+<img width="869" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/f1522564-a6a9-433d-9bc8-d032762603b7">
+
+parse out the score for each attribute and assign them as data attributes to each state's path tag in the map,
 
 <img width="1086" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/ab7b068a-3c0a-4d00-8ab9-ad6c8f007e6c">
 
-and finally, a function SetColor assigns a color to the state (path) depending on the value returned.
+and finally, assign a color (`SetColor`) to each state (path) depending on the value returned.
 
 <img width="335" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/27747142-7924-4869-935c-05d9089937ac">
 
-There are event listeners added to each state's path tag which fetch the state data on that specific state,
+Each state's path tag receives an `EventListener` which, upon `click`, fetches the scores on all issues for that specific state,
 
 <img width="515" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/4c0e5b3c-1c6a-40b7-93fa-998cecdd6109">
 
-and that data is used to generate a bar chart whose values are filled in based on the scores returned by that fetch:
+which is used to generate a bar chart whose values are filled in and color set based on each score:
 
 <img width="490" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/777406ae-7947-480d-bf08-86b1d72c59e0">
 
