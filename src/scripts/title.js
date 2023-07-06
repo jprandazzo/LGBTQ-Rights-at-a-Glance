@@ -20,14 +20,14 @@ class Title {
 
         let github = document.createElement('div')
         github.setAttribute('id','github')
-        github.innerHTML = '<a href="https://github.com/jprandazzo" target="_blank"><img src="../src/styles/github-mark.svg"></a>'
+        github.innerHTML = '<a href="https://github.com/jprandazzo" target="_blank"><img src="../src/images/github-mark.svg"></a>'
         github.style.cssFloat = 'right'
 
         this.ele.appendChild(github)
 
         let linkedin = document.createElement('div')
         linkedin.setAttribute('id','linkedin')
-        linkedin.innerHTML = '<a href="https://linkedin.com/in/jprandazzo" target="_blank"><img src="../src/styles/LI2.png"></a>'
+        linkedin.innerHTML = '<a href="https://linkedin.com/in/jprandazzo" target="_blank"><img src="../src/images/LI2.png"></a>'
         linkedin.style.cssFloat = 'right'
 
         this.ele.appendChild(linkedin)

@@ -18,7 +18,7 @@ myChart.globalCompositeOperation='destination-over';
 grapharea.style.display = 'none';
 
 
-let loadmap = function() {d3.xml("src/scripts/us.svg")
+let loadmap = function() {d3.xml("../src/images/us.svg")
   .then(data => {
     d3.select("#us_map")
     .node().append(data.documentElement)
@@ -76,7 +76,7 @@ let loadmap = function() {d3.xml("src/scripts/us.svg")
                 }
               }
             });
-            Chart.defaults.global.defaultFontColor = "#000000";
+            // Chart.defaults.global.defaultFontColor = "#000000";
 
         })
 
