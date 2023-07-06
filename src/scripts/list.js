@@ -3,12 +3,10 @@ export default class List {
         this.obj = obj;
 
         this.obj.style.display = displayStatus
-        // this.ele.innerHTML = "It's Alive!!!";
         this.clearList = this.clearList.bind(this);
         this.toggleHide = this.toggleHide.bind(this);
-
-    //     this.ele.addEventListener("click", this.handleClick);
     }
+    
     toggleHide(){
         if (this.obj.style.display === "none") {
           this.obj.style.display = "block";
