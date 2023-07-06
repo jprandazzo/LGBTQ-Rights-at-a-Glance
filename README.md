@@ -17,9 +17,12 @@ One can also click any state on the map (blue arrow) to show the scores for all 
 
 <img width="1654" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/3f455337-91d7-4bf7-971f-3a8df2d3300d">
 
+On `hover`, each of the bars in the bar chart has a tooltip with the state's policy on that issue.
 
-and finally, when any item is selected, the Clear button (green arrow) becomes
-active and one can click it to clear the screen and start over.
+<img width="678" alt="Screenshot 2023-07-06 at 2 23 11 PM" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/e83c9473-c4a7-42b3-ad1d-ef8d04ef88f4">
+
+
+and finally, when any item is selected, the Clear button (green arrow) becomes active and one can click it to clear the screen and start over.
 
 
 ## Technical details
