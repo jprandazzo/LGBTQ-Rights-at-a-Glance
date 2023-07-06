@@ -16,7 +16,7 @@ active and one can click it to clear the screen and start over.
 
 ## Technical details
 
-###Fetch/Graph
+### Fetch/Graph
 The data is fetched from the following HRC API endpoint: https://hrc-lgbtq-2020.herokuapp.com/api,
 <img width="660" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/2606bfa4-d48a-496c-ad29-319765eae761">
 
