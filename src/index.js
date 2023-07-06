@@ -55,20 +55,12 @@ getIssuesData()
                 pathId.style.fill = setColor(state.value)
                 let back_button = new Button(document.getElementById("back_button"), 'Clear Selection', 'greyedOut')
                 back_button.setActive()
-                // debugger
             })
             })
             issues_list.appendChild(li)
         })
         
-        // state_issues_list.forEach(obj => {
-        //     let list = new List(obj.node, "none")
-        //     obj.node.issues.forEach(issue =>{
-
-        //     })
-        // })
     })
     .catch(error => {
-        // If our fetch was unnsuccessful, here we can handle our error(s)
         console.error('There has been a problem with your fetch operation: ', error);
     });

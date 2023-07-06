@@ -35,7 +35,7 @@ let loadmap = function() {d3.xml("/src/images/us.svg")
             let state_name = data.data.state.name
             let state_description = data.data.state.score.description // (e.g. "High Priority to Achieve Basic Equality")
             let state_kind = data.data.state.score.kind
-            let state_issues = data.data.state.issues.map((issue, idx) => {return {x:idx,y:issue.value, policy: issue.policy}})
+            let state_issues = data.data.state.issues.map((issue, idx) => {return {x:idx, y:issue.value, policy: issue.policy}})
 
             // state_issues_list.appendChild(document.createTextNode(state_name))
             myChart.destroy()
