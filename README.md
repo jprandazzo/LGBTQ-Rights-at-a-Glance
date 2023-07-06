@@ -9,8 +9,16 @@ The functionality is straightforward and the data (coming from the Human Rights 
 ## Key Functionality
 
 There is a list of 11 issues (red arrow), which highlights states in a color-coded system when clicked 
-(2 shades of green if favorable to the LGBTQ+ community, grey if no data, or red if unfavorable.
-One can also click any state on the map (blue arrow) to show the scores for all 11 topics in that state, and finally, when any item is selected, the Clear button (green arrow) becomes
+(2 shades of green, depending on label of favorability, if sentiment is positive toward the LGBTQ+ community, grey if no data, or red if negative.
+
+<img width="1612" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/e1a23932-6035-4fa3-85bc-14921a978fc7">
+
+One can also click any state on the map (blue arrow) to show the scores for all 11 topics in that state, 
+
+<img width="1654" alt="image" src="https://github.com/jprandazzo/LGBTQ-Rights-at-a-Glance/assets/131551196/3f455337-91d7-4bf7-971f-3a8df2d3300d">
+
+
+and finally, when any item is selected, the Clear button (green arrow) becomes
 active and one can click it to clear the screen and start over.
 
 
